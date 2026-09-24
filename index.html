@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nasir Digital Growth | Influencer Marketing Agency</title>
+
+  <meta
+    name="description"
+    content="Nasir Digital Growth is a UK-based influencer marketing agency connecting brands with creators for authentic, performance-focused partnerships."
+  />
+
+  <meta name="theme-color" content="#080b14" />
+
+  <style>
+    :root {
+      --bg: #080b14;
+      --bg-soft: #0d1120;
+      --card: rgba(255, 255, 255, 0.055);
+      --card-hover: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.1);
+
+      --white: #ffffff;
+      --text: #e9ecf4;
+      --muted: #9ba3b7;
+
+      --blue: #4f7cff;
+      --blue-light: #7b9cff;
+      --violet: #8b5cf6;
+      --cyan: #22d3ee;
+
+      --radius: 20px;
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(79, 124, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 15% 40%, rgba(139, 92, 246, 0.08), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: 0.3s ease;
+    }
+
+    header.scrolled {
+      background: rgba(8, 11, 20, 0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      font-size: 17px;
+    }
+
+    .logo-mark {
+      width: 39px;
+      height: 39px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 13px;
+      font-weight: 900;
+      background:
+        linear-gradient(135deg, var(--blue), var(--violet));
+      box-shadow:
+        0 8px 25px rgba(79,124,255,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: rgba(255,255,255,0.16);
+      border-radius: 50%;
+      top: -7px;
+      right: -5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 31px;
+    }
+
+    .nav-links a {
+      color: #b7bed0;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-cta {
+      padding: 11px 18px;
+      border-radius: 10px;
+      color: white !important;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border);
+    }
+
+    .nav-cta:hover {
+      background: rgba(255,255,255,0.13);
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 150px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 12px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: #cbd2e3;
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #49df8b;
+      box-shadow: 0 0 12px #49df8b;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      max-width: 760px;
+      color: white;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        100deg,
+        #ffffff 10%,
+        #9cb4ff 45%,
+        #a980ff 90%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      margin-top: 28px;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 650;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      box-shadow: 0 15px 35px rgba(79,124,255,0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(79,124,255,0.27);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.035);
+      color: #d9deea;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      position: relative;
+      min-height: 500px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orb {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, #90a9ff, transparent 25%),
+        radial-gradient(circle at 70% 65%, #8b5cf6, transparent 30%),
+        linear-gradient(135deg, #1c347e, #26164d);
+      filter: blur(0.2px);
+      box-shadow:
+        0 0 100px rgba(79,124,255,0.18),
+        inset -25px -30px 60px rgba(0,0,0,0.25);
+      animation: float 7s ease-in-out infinite;
+      position: relative;
+    }
+
+    .orb::before {
+      content: "";
+      position: absolute;
+      inset: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .orb::after {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      top: 55px;
+      left: 65px;
+      filter: blur(2px);
+    }
+
+    .floating-card {
+      position: absolute;
+      padding: 17px 19px;
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 16px;
+      background: rgba(12,16,29,0.72);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+      animation: floatSmall 5s ease-in-out infinite;
+    }
+
+    .floating-card small {
+      display: block;
+      color: #7f899f;
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+
+    .floating-card strong {
+      color: white;
+      font-size: 14px;
+    }
+
+    .card-one {
+      top: 65px;
+      right: 10px;
+    }
+
+    .card-two {
+      bottom: 65px;
+      left: 10px;
+      animation-delay: -2s;
+    }
+
+    .card-three {
+      bottom: 105px;
+      right: 5px;
+      animation-delay: -1s;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-16px) rotate(2deg); }
+    }
+
+    @keyframes floatSmall {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    /* =========================
+       SECTION BASICS
+    ========================== */
+
+    section {
+      padding: 105px 0;
+    }
+
+    .section-label {
+      color: #7f9cff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 13px;
+    }
+
+    .section-heading {
+      font-size: clamp(34px, 4vw, 52px);
+      letter-spacing: -2px;
+      line-height: 1.08;
+      color: white;
+      max-width: 700px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 640px;
+      margin-top: 18px;
+      font-size: 16px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services-grid {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      background: var(--card-hover);
+      border-color: rgba(123,156,255,0.25);
+    }
+
+    .service-icon {
+      width: 47px;
+      height: 47px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      margin-bottom: 23px;
+      background: rgba(79,124,255,0.1);
+      color: #86a2ff;
+      border: 1px solid rgba(79,124,255,0.16);
+    }
+
+    .service-icon svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .service-card h3 {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       CREATOR / BRAND SECTION
+    ========================== */
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 55px;
+    }
+
+    .large-card {
+      padding: 40px;
+      min-height: 360px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 90% 10%, rgba(139,92,246,0.16), transparent 30%),
+        var(--card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .large-card.blue {
+      background:
+        radial-gradient(circle at 90% 10%, rgba(79,124,255,0.17), transparent 30%),
+        var(--card);
+    }
+
+    .large-card-number {
+      color: rgba(255,255,255,0.1);
+      font-size: 100px;
+      line-height: 0.8;
+      font-weight: 800;
+      position: absolute;
+      right: 22px;
+      bottom: 0;
+    }
+
+    .large-card h3 {
+      color: white;
+      font-size: 27px;
+      letter-spacing: -1px;
+      margin-bottom: 13px;
+    }
+
+    .large-card p {
+      color: var(--muted);
+      max-width: 440px;
+      font-size: 15px;
+    }
+
+    .feature-list {
+      margin-top: 25px;
+      display: grid;
+      gap: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-list div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #cbd2e2;
+      font-size: 13px;
+    }
+
+    .check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(79,124,255,0.14);
+      color: #86a2ff;
+      font-size: 11px;
+    }
+
+    /* =========================
+       PROCESS
+    ========================== */
+
+    .process-grid {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .process-step {
+      padding: 25px;
+      border-top: 1px solid var(--border);
+      position: relative;
+    }
+
+    .process-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: 0;
+      width: 35px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--blue), transparent);
+    }
+
+    .step-number {
+      color: #6f7c9d;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .process-step h3 {
+      color: white;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       WHY US
+    ========================== */
+
+    .why-wrapper {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-statement {
+      font-size: 34px;
+      color: white;
+      line-height: 1.2;
+      letter-spacing: -1.4px;
+    }
+
+    .why-statement span {
+      color: #7d879e;
+    }
+
+    .why-items {
+      display: grid;
+      gap: 15px;
+    }
+
+    .why-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 17px;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .why-item-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: rgba(139,92,246,0.1);
+      color: #a98aff;
+    }
+
+    .why-item h4 {
+      color: white;
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .why-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-box {
+      padding: 65px;
+      border-radius: 28px;
+      border: 1px solid rgba(123,156,255,0.16);
+      background:
+        radial-gradient(circle at 15% 50%, rgba(79,124,255,0.12), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(139,92,246,0.12), transparent 30%),
+        rgba(255,255,255,0.035);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .contact-box h2 {
+      color: white;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: -2px;
+      max-width: 650px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-top: 15px;
+      max-width: 560px;
+    }
+
+    .contact-email {
+      margin-top: 18px;
+      display: inline-block;
+      color: #9eb2ff;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-copy {
+      color: #737c91;
+      font-size: 12px;
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.035);
+      transition: 0.25s ease;
+    }
+
+    .social svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .social.instagram:hover {
+      border-color: #e1306c;
+      color: #e1306c;
+    }
+
+    .social.facebook:hover {
+      border-color: #1877f2;
+      color: #1877f2;
+    }
+
+    .social.email:hover {
+      border-color: #9eb2ff;
+      color: #9eb2ff;
+    }
+
+    /* =========================
+       SCROLL ANIMATION
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 4%;
+        width: 92%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: rgba(9,12,22,0.96);
+        backdrop-filter: blur(20px);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero-grid,
+      .why-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 45px 30px;
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2.8px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 350px;
+      }
+
+      .orb {
+        width: 270px;
+        height: 270px;
+      }
+
+      .floating-card {
+        transform: scale(0.85);
+      }
+
+      .card-one {
+        right: -5px;
+      }
+
+      .card-two {
+        left: -5px;
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box h2 {
+        font-size: 38px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header id="header">
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <span class="logo-mark">NDG</span>
+        <span>Nasir Digital Growth</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#process">Process</a>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+      </nav>
+
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            UK Influencer Marketing Agency
+          </div>
+
+          <h1>
+            Connecting brands with
+            <span class="gradient-text">influence.</span>
+          </h1>
+
+          <p class="hero-description">
+            Nasir Digital Growth helps brands discover relevant creators
+            and build authentic influencer partnerships that connect with
+            the right audiences.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#contact" class="btn btn-primary">
+              Start a conversation
+              <span>→</span>
+            </a>
+
+            <a href="#services" class="btn btn-secondary">
+              Explore services
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual reveal">
+
+          <div class="orb"></div>
+
+          <div class="floating-card card-one">
+            <small>Creator partnerships</small>
+            <strong>Built around relevance</strong>
+          </div>
+
+          <div class="floating-card card-two">
+            <small>Campaign approach</small>
+            <strong>Audience first</strong>
+          </div>
+
+          <div class="floating-card card-three">
+            <small>Based in</small>
+            <strong>United Kingdom 🇬🇧</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="reveal">
+          <div class="section-label">What we do</div>
+
+          <h2 class="section-heading">
+            Influencer partnerships without the guesswork.
+          </h2>
+
+          <p class="section-description">
+            From identifying relevant creators to building campaign
+            opportunities, we focus on finding partnerships that make
+            sense for both brands and audiences.
+          </p>
+        </div>
+
+
+        <div class="services-grid">
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="9" cy="8" r="3"></circle>
+                <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
+                <path d="M16 11c2.8 0 5 2.2 5 5"></path>
+                <path d="M16 5.5a3 3 0 0 1 0 5"></path>
+              </svg>
+            </div>
+
+            <h3>Creator Partnerships</h3>
+
+            <p>
+              We identify creators whose content, audience and positioning
+              align naturally with a brand's objectives.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19V5"></path>
+                <path d="M4 19h16"></path>
+                <path d="M7 15l4-5 3 3 5-7"></path>
+              </svg>
+            </div>
+
+            <h3>Campaign Partnerships</h3>
+
+            <p>
+              We connect brands and creators around campaigns designed
+              around the right audience, platform and content format.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="8"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 4V2"></path>
+                <path d="M12 22v-2"></path>
+                <path d="M4 12H2"></path>
+                <path d="M22 12h-2"></path>
+              </svg>
+            </div>
+
+            <h3>Creator Sourcing</h3>
+
+            <p>
+              Need additional creator options for a campaign? We can
+              source relevant profiles based on your specific brief.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         APPROACH
+    ========================== -->
+
+    <section id="approach">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <div class="section-label">Our approach</div>
+
+          <h2 class="section-heading">
+            The right creator is more than a follower count.
+          </h2>
+
+          <p class="section-description">
+            We look beyond surface-level metrics and consider the wider
+            picture — content, audience, relevance and the relationship
+            creators have built with their communities.
+          </p>
+
+        </div>
+
+
+        <div class="split">
+
+          <div class="large-card blue reveal">
+
+            <div class="large-card-number">01</div>
+
+            <h3>For Brands</h3>
+
+            <p>
+              Find creators who can communicate your product naturally
+              instead of forcing a message into content that doesn't fit.
+            </p>
+
+            <div class="feature-list">
+
+              <div>
+                <span class="check">✓</span>
+                Audience-led creator selection
+              </div>
+
+              <div>
+                <span class="check">✓</span>
+                Relevant content categories
+              </div>
+
+              <div>
+                <span class="check">✓</span>
+                Platform-specific partnerships
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="large-card reveal">
+
+            <div class="large-card-number">02</div>
+
+            <h3>For Creators</h3>
+
+            <p>
+              We look for opportunities where the brand and creator
+              relationship makes genuine sense — not simply another
+              sponsorship.
+            </p>
+
+            <div class="feature-list">
+
+              <div>
+                <span class="check">✓</span>
+                Relevant brand opportunities
+              </div>
+
+              <div>
+                <span class="check">✓</span>
+                Clear campaign expectations
+              </div>
+
+              <div>
+                <span class="check">✓</span>
+                Long-term partnership potential
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROCESS
+    ========================== -->
+
+    <section id="process">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <div class="section-label">The process</div>
+
+          <h2 class="section-heading">
+            Simple from start to finish.
+          </h2>
+
+          <p class="section-description">
+            A straightforward approach designed to make creator
+            partnerships easier to navigate.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-step reveal">
+
+            <div class="step-number">01 / BRIEF</div>
+
+            <h3>Understand</h3>
+
+            <p>
+              We understand the brand, campaign goals, audience and
+              content requirements.
+            </p>
+
+          </div>
+
+
+          <div class="process-step reveal">
+
+            <div class="step-number">02 / MATCH</div>
+
+            <h3>Match</h3>
+
+            <p>
+              We identify creators whose audience and content are
+              relevant to the campaign.
+            </p>
+
+          </div>
+
+
+          <div class="process-step reveal">
+
+            <div class="step-number">03 / CONNECT</div>
+
+            <h3>Connect</h3>
+
+            <p>
+              We facilitate the partnership and help bring the campaign
+              together.
+            </p>
+
+          </div>
+
+
+          <div class="process-step reveal">
+
+            <div class="step-number">04 / GROW</div>
+
+            <h3>Build</h3>
+
+            <p>
+              The goal is to create partnerships that can develop beyond
+              a single campaign.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY NDG
+    ========================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="why-wrapper">
+
+          <div class="reveal">
+
+            <div class="section-label">Why NDG</div>
+
+            <div class="why-statement">
+              <span>Influencer marketing</span>
+              should feel like a partnership, not an advertisement.
+            </div>
+
+          </div>
+
+
+          <div class="why-items">
+
+            <div class="why-item reveal">
+
+              <div class="why-item-icon">
+                ◇
+              </div>
+
+              <div>
+                <h4>Relevance first</h4>
+                <p>
+                  Creator selection starts with audience and content
+                  relevance rather than vanity metrics alone.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="why-item reveal">
+
+              <div class="why-item-icon">
+                ◎
+              </div>
+
+              <div>
+                <h4>Authentic partnerships</h4>
+                <p>
+                  We aim to create campaigns that feel natural within
+                  the creator's existing content.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="why-item reveal">
+
+              <div class="why-item-icon">
+                ↗
+              </div>
+
+              <div>
+                <h4>Built for growth</h4>
+                <p>
+                  We focus on creating relationships that can develop
+                  into repeat partnerships over time.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-box reveal">
+
+          <div>
+
+            <div class="section-label">Let's work together</div>
+
+            <h2>
+              Have a campaign in mind?
+            </h2>
+
+            <p>
+              Whether you're a brand looking for creators or a creator
+              interested in relevant partnerships, we'd be happy to
+              start a conversation.
+            </p>
+
+            <a
+              href="mailto:ibrahim@nasirdigitalgrowth.com"
+              class="contact-email"
+            >
+              ibrahim@nasirdigitalgrowth.com
+            </a>
+
+          </div>
+
+
+          <a
+            href="mailto:ibrahim@nasirdigitalgrowth.com"
+            class="btn btn-primary"
+          >
+            Get in touch →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div>
+
+        <a href="#home" class="logo">
+
+          <span class="logo-mark">NDG</span>
+
+          <span>Nasir Digital Growth</span>
+
+        </a>
+
+        <p class="footer-copy" style="margin-top:10px;">
+          © 2026 Nasir Digital Growth. All rights reserved.
+        </p>
+
+      </div>
+
+
+      <div class="socials">
+
+        <!-- EMAIL -->
+        <a
+          href="mailto:ibrahim@nasirdigitalgrowth.com"
+          class="social email"
+          aria-label="Email"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m3 7 9 6 9-6"></path>
+          </svg>
+        </a>
+
+
+        <!-- INSTAGRAM -->
+        <a
+          href="https://www.instagram.com/nasirdigitalgrowth/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social instagram"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+
+
+        <!-- FACEBOOK -->
+        <a
+          href="https://www.facebook.com/me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social facebook"
+          aria-label="Facebook"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v6h4v-6h3.2l.8-4H13V9c0-.67.33-1 1-1z"/>
+          </svg>
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* Sticky navigation */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* Mobile navigation */
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    const navLinks = document.getElementById("navLinks");
+
+    mobileMenu.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+
+    /* Close mobile menu when clicking a link */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+
+    });
+
+
+    /* Scroll reveal animation */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>
